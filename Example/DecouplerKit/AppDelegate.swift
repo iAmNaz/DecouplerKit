@@ -1,46 +1,60 @@
 //
 //  AppDelegate.swift
-//  DecouplerKit
+//  ExerciseTracker
 //
-//  Created by iamnaz on 06/08/2018.
-//  Copyright (c) 2018 iamnaz. All rights reserved.
+//  Created by Nazario Mariano on 06/06/2018.
+//  Copyright © 2018 Nazario Mariano. All rights reserved.
 //
 
 import UIKit
+import Dip
+import Dip_UI
+import DecouplerKit
+
+extension HomeTableViewController: StoryboardInstantiatable { }
+extension ComposerContainerViewController: StoryboardInstantiatable { }
+extension ExerciseComposerTableViewController: StoryboardInstantiatable { }
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let container = DependencyContainer { container in
+        
+        container.register(.singleton) { ResponderRegistry() as ResponderRegistry }
+        
+        container.register(storyboardType: HomeTableViewController.self, tag: "HomeTableViewController")
+            .resolvingProperties { container, controller in
+                controller.registry = try container.resolve() as ResponderRegistry
+        }
+        
+        container.register(storyboardType: ComposerContainerViewController.self, tag: "ComposerContainerViewController")
+            .resolvingProperties { container, controller in
+                controller.registry = try container.resolve() as ResponderRegistry
+        }
+        
+        container.register(storyboardType: ExerciseComposerTableViewController.self, tag: "ExerciseComposerTableViewController")
+            .resolvingProperties { container, controller in
+                controller.registry = try container.resolve() as ResponderRegistry
+        }
+        
+        DependencyContainer.uiContainers = [container]
+    }
+    
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let registry = try! container.resolve() as ResponderRegistry
+        let formattter = DateFormatter()
+            formattter.dateStyle = .medium
+        let exerciseController = ExerciseController()
+            exerciseController.dateFormatter = formattter
+            exerciseController.dataStoreController = RealmPersistentStoreController()
+        let formController = FormController()
+        
+        registry.register(inputHandler: exerciseController)
+        registry.register(inputHandler: formController)
+        
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-
 }
 

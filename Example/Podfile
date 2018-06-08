@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'DecouplerKit_Example' do
   pod 'DecouplerKit', :path => '../'
-
+  pod 'RealmSwift'
   target 'DecouplerKit_Tests' do
     inherit! :search_paths
 

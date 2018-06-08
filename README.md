@@ -9,11 +9,10 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
 
 ## Installation
 
-DecouplerKit is available through [CocoaPods](https://cocoapods.org). To install
+To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -22,7 +21,7 @@ pod 'DecouplerKit'
 
 ## Author
 
-iamnaz, naz.workaddress@gmail.com
+iamnaz
 
 ## License
 
