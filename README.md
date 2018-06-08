@@ -13,10 +13,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Installation
 
 To install
-it, simply add the following line to your Podfile:
+it, simply add the following line to your Podfile. For now since this is a new lib instead of loading it from git you may need to download the lib and reference it via the pod's path on your machine.
 
 ```ruby
-pod 'DecouplerKit'
+pod 'DecouplerKit', :path => 'to Decoupler path/'
 ```
 
 ## Author
