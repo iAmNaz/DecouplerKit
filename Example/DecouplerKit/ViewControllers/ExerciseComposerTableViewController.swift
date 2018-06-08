@@ -24,6 +24,7 @@ class ExerciseComposerTableViewController: UITableViewController {
     var dateFormatter = DateFormatter()
     var session: ExerciseSessionViewModel?
     var isNew = true
+    
     var duration: Date! {
         didSet {
             session?.duration = duration

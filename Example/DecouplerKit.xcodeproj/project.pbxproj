@@ -13,7 +13,6 @@
 		4518199120CA5D3F000238F4 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518197F20CA5D3E000238F4 /* Errors.swift */; };
 		4518199220CA5D3F000238F4 /* ComposerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198120CA5D3F000238F4 /* ComposerContainerViewController.swift */; };
 		4518199320CA5D3F000238F4 /* ExerciseComposerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198220CA5D3F000238F4 /* ExerciseComposerTableViewController.swift */; };
-		4518199420CA5D3F000238F4 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198320CA5D3F000238F4 /* SessionTableViewCell.swift */; };
 		4518199520CA5D3F000238F4 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198420CA5D3F000238F4 /* HomeTableViewController.swift */; };
 		4518199620CA5D3F000238F4 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198520CA5D3F000238F4 /* DateViewController.swift */; };
 		4518199720CA5D3F000238F4 /* ExerciseSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198620CA5D3F000238F4 /* ExerciseSessionViewModel.swift */; };
@@ -47,7 +46,6 @@
 		4518197F20CA5D3E000238F4 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		4518198120CA5D3F000238F4 /* ComposerContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposerContainerViewController.swift; sourceTree = "<group>"; };
 		4518198220CA5D3F000238F4 /* ExerciseComposerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseComposerTableViewController.swift; sourceTree = "<group>"; };
-		4518198320CA5D3F000238F4 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
 		4518198420CA5D3F000238F4 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		4518198520CA5D3F000238F4 /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		4518198620CA5D3F000238F4 /* ExerciseSessionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSessionViewModel.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			children = (
 				4518198120CA5D3F000238F4 /* ComposerContainerViewController.swift */,
 				4518198220CA5D3F000238F4 /* ExerciseComposerTableViewController.swift */,
-				4518198320CA5D3F000238F4 /* SessionTableViewCell.swift */,
 				4518198420CA5D3F000238F4 /* HomeTableViewController.swift */,
 				4518198520CA5D3F000238F4 /* DateViewController.swift */,
 				4518198620CA5D3F000238F4 /* ExerciseSessionViewModel.swift */,
@@ -404,7 +401,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4518199620CA5D3F000238F4 /* DateViewController.swift in Sources */,
-				4518199420CA5D3F000238F4 /* SessionTableViewCell.swift in Sources */,
 				4518199C20CA5D3F000238F4 /* RealmPersistentStoreController.swift in Sources */,
 				4518199D20CA5D3F000238F4 /* AppDelegate.swift in Sources */,
 				4518198F20CA5D3F000238F4 /* Enumerations.swift in Sources */,
