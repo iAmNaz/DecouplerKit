@@ -69,7 +69,7 @@ class RealmPersistentStoreController: NSObject, PersistentStore {
     fileprivate func findObject(session: ExcerciseSession) -> Exercise? {
         let predicate = NSPredicate(format: "date = %@" , session.date as CVarArg)
         let exercises = realm.objects(Exercise.self).filter(predicate)
-        if exercises.count > 0 {
+        if !exercises.isEmpty {
             return exercises.first!
         }
         return nil
