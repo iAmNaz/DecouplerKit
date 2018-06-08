@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DecouplerKit_Example' do
+  pod 'DecouplerKit', :path => '../'
+
+  target 'DecouplerKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
