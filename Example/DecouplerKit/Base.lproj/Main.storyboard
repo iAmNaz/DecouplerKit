@@ -13,7 +13,7 @@
         <!--Exercise Tracker-->
         <scene sceneID="HBm-b8-68N">
             <objects>
-                <tableViewController title="Exercise Tracker" id="Hcc-iN-xwr" customClass="HomeTableViewController" customModule="ExerciseTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Exercise Tracker" id="Hcc-iN-xwr" customClass="HomeTableViewController" customModule="DecouplerKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="llD-nl-xhN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +70,7 @@
         <!--Exercise Builder-->
         <scene sceneID="Dhz-Pa-3IT">
             <objects>
-                <viewController title="Exercise Builder" id="s8i-eX-aXd" customClass="ComposerContainerViewController" customModule="ExerciseTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Exercise Builder" id="s8i-eX-aXd" customClass="ComposerContainerViewController" customModule="DecouplerKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Skx-SU-oMA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,7 +125,7 @@
         <!--Exercise Composer Table View Controller-->
         <scene sceneID="NOm-6g-j2X">
             <objects>
-                <tableViewController id="vr3-XX-p9J" customClass="ExerciseComposerTableViewController" customModule="ExerciseTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="vr3-XX-p9J" customClass="ExerciseComposerTableViewController" customModule="DecouplerKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ILc-eg-gOR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +248,7 @@
         <!--Date View Controller-->
         <scene sceneID="ARY-a0-B8U">
             <objects>
-                <viewController id="M8f-zW-VgS" customClass="DateViewController" customModule="ExerciseTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="M8f-zW-VgS" customClass="DateViewController" customModule="DecouplerKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T3l-4t-y4h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -318,7 +318,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sru-qO-khS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="144.3778110944528"/>
+            <point key="canvasLocation" x="297" y="170"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

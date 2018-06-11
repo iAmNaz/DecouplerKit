@@ -28,8 +28,14 @@ class FormController: NSObject, Interface {
         
        
             let session = request.body() as ExerciseSessionViewModel
-            
-        if (session.name?.isEmpty)! {
+        
+        guard let name = session.name else {
+            return Promise { seal in
+                seal.reject(AppError.form(.invalid(.name, .empty(message: "Name is empty"))))
+            }
+        }
+        
+        if name.isEmpty {
                  return Promise { seal in
                     seal.reject(AppError.form(.invalid(.name, .empty(message: "Name is empty"))))
                 }
