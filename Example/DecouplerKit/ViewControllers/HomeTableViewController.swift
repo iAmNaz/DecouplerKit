@@ -18,7 +18,7 @@ class HomeTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let request = Request(proc: Task.WorkOut(.list))
+        let request = Request(proc: Task.Exercise(.list))
         
         firstly {
             registry.tx(request: request)
@@ -89,7 +89,7 @@ class HomeTableViewController: UITableViewController {
     }
     
     fileprivate func deleteRow(exercise: ExerciseSessionViewModel) {
-        let deleteRequest = Request(proc: Task.WorkOut(.delete), body: exercise)
+        let deleteRequest = Request(proc: Task.Exercise(.delete), body: exercise)
         registry.tx(request: deleteRequest).done { (response) in
             let _  = response
         }

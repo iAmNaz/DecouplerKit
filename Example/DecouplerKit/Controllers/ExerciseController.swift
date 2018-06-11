@@ -18,13 +18,13 @@ class ExerciseController: NSObject, Interface {
         let task = request.process as! Task
         
         switch task {
-        case .WorkOut(.list):
+        case .Exercise(.list):
             return list(proc: task)
-        case .WorkOut(.add):
+        case .Exercise(.add):
             return add(request: request)
-        case .WorkOut(.delete):
+        case .Exercise(.delete):
             return delete(request: request)
-        case .WorkOut(.edit):
+        case .Exercise(.edit):
             return edit(request: request)
         default:
             return Promise { seal in

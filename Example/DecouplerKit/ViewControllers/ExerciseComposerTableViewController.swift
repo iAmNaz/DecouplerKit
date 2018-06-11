@@ -103,9 +103,9 @@ class ExerciseComposerTableViewController: UITableViewController {
     func saveSession() {
         var action: Task!
         if isNew {
-            action = Task.WorkOut(.add)
+            action = Task.Exercise(.add)
         }else{
-            action = Task.WorkOut(.edit)
+            action = Task.Exercise(.edit)
         }
         
         let saveRequest = Request(proc: action, body: session)

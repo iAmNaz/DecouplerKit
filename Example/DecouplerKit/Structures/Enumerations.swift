@@ -13,7 +13,7 @@ enum Task: Processable, Equatable {
     var key: String {
         get {
             switch self {
-            case .WorkOut( _):
+            case .Exercise( _):
                 return "ExerciseController"
             case .Form( _):
                 return "FormController"
@@ -28,7 +28,7 @@ enum Task: Processable, Equatable {
         case delete
     }
     
-    case WorkOut(WorkoutController)
+    case Exercise(WorkoutController)
     case Form(FormController)
     
     enum FormController {
@@ -40,7 +40,7 @@ enum Task: Processable, Equatable {
     
     static func == (lhs: Task, rhs: Task) -> Bool {
         switch (lhs, rhs) {
-        case (let .WorkOut(task1), let .WorkOut(task2)):
+        case (let .Exercise(task1), let .Exercise(task2)):
             return task1 == task2
         case (let .Form(.Validate(task1)), let .Form(.Validate(task2))):
             return task1 == task2
