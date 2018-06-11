@@ -127,11 +127,18 @@
 			isa = PBXGroup;
 			children = (
 				4518198A20CA5D3F000238F4 /* FormController.swift */,
-				4518198B20CA5D3F000238F4 /* FakePersistentStoreController.swift */,
 				4518198C20CA5D3F000238F4 /* ExerciseController.swift */,
-				4518198D20CA5D3F000238F4 /* RealmPersistentStoreController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4553568A20CE4FD30039DDB8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4518198D20CA5D3F000238F4 /* RealmPersistentStoreController.swift */,
+				4518198B20CA5D3F000238F4 /* FakePersistentStoreController.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -159,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				4518198E20CA5D3F000238F4 /* AppDelegate.swift */,
+				4553568A20CE4FD30039DDB8 /* Services */,
 				4518198920CA5D3F000238F4 /* Controllers */,
 				4518198720CA5D3F000238F4 /* Entities */,
 				4518197C20CA5D3E000238F4 /* Structures */,
