@@ -29,8 +29,8 @@ enum Task: Processable, Equatable {
     }
     
     case WorkOut(WorkoutController)
-    
     case Form(FormController)
+    
     enum FormController {
         enum Forms {
             case AddSession

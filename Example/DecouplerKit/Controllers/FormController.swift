@@ -25,9 +25,7 @@ class FormController: NSObject, Interface {
     }
     
     func validate(request: Request) -> Promise<MessageContainer> {
-        
-       
-            let session = request.body() as ExerciseSessionViewModel
+        let session = request.body() as ExerciseSessionViewModel
         
         guard let name = session.name else {
             return Promise { seal in
