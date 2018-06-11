@@ -52,8 +52,8 @@ class ExerciseComposerTableViewController: UITableViewController {
     }
     
     func sessionChanged() {
-        let request = Request(proc: Task.Form(.Validate(.AddSession)), body: session)
-        registry.tx(request: request).done { response in
+        let validationRequest = Request(proc: Task.Form(.Validate(.AddSession)), body: session)
+        registry.tx(request: validationRequest).done { response in
             self.saveBtn.isEnabled = true
         }.catch { (error) in
             self.saveBtn.isEnabled = false
