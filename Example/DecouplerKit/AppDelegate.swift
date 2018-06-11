@@ -36,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .resolvingProperties { container, controller in
                 controller.registry = try container.resolve() as ResponderRegistry
         }
-        
         DependencyContainer.uiContainers = [container]
     }
     
