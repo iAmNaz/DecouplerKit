@@ -30,6 +30,10 @@ it, simply add the following line to your Podfile. For now since this is a new l
 pod 'DecouplerKit', :path => 'to Decoupler path/'
 ```
 
+## TODO
+- Registry object management
+- Multiple registry management
+
 ## Author
 
 iamnaz
