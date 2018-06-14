@@ -5,6 +5,17 @@
 [![License](https://img.shields.io/cocoapods/l/DecouplerKit.svg?style=flat)](https://cocoapods.org/pods/DecouplerKit)
 [![Platform](https://img.shields.io/cocoapods/p/DecouplerKit.svg?style=flat)](https://cocoapods.org/pods/DecouplerKit)
 
+## Features
+- Single interface for your user interface and worker classes and controllers
+- Asynch and sync task friendly
+- Easier to test as it encourages decoupled code and methods are generally functional 
+- Uses PromiseKit to properly wrap requests and responses
+- Use cases scenarios are documented as enums
+- Worker classes or controllers are registered in a registry object
+
+## Animated Demo of Data Flow
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
