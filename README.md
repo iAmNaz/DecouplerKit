@@ -13,6 +13,14 @@
 - Use cases scenarios are documented as enums
 - Worker classes or controllers are registered in a registry object
 
+## It is
+- It makes code decoupling easier with the user of registries and interface
+- It works with any iOS architecture such as MVVM, MVP, etc
+
+## It is NOT
+- A software architecture
+- Enforcing a specific architecture while it is up to the developer to decide which one he will use with this kit
+
 ## Animated Data Flow
 ![DecouplerKit](https://raw.githubusercontent.com/iAmNaz/DecouplerKit/master/dk-animated-demo.gif)
 
@@ -33,6 +41,7 @@ pod 'DecouplerKit', :path => 'to Decoupler path/'
 ## TODO
 - Registry object management
 - Multiple registry management
+- MVVM, MVP demo
 
 ## Author
 
