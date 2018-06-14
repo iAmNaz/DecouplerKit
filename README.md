@@ -14,7 +14,7 @@
 - Worker classes or controllers are registered in a registry object
 
 ## It is
-- It makes code decoupling easier with the user of registries and interface
+- It makes code decoupling easier with the use of registries and protocol
 - It works with any iOS architecture such as MVVM, MVP, etc
 
 ## It is NOT
