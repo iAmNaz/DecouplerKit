@@ -13,8 +13,8 @@
 - Use cases scenarios are documented as enums
 - Worker classes or controllers are registered in a registry object
 
-## Animated Demo of Data Flow
-
+## Animated Data Flow
+![DecouplerKit](https://raw.githubusercontent.com/iAmNaz/DecouplerKit/master/dk-animated-demo.gif)
 
 ## Example
 
