@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// A help extension to retrieve string class names
 public extension NSObject{
     public class var nameOfClass: String{
         return NSStringFromClass(self).components(separatedBy: ".").last!

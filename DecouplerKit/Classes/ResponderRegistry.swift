@@ -9,10 +9,15 @@
 import UIKit
 import PromiseKit
 
+/// A protocol implemented by the ResponderRegistry calss
 public protocol Registry: Interface {
+    /// Call this method to register your controllers or module representatives
+    /// - parameter inputHandler: Input handlers are Interface conformant objects that can fulfill or manage a request.
     func register(inputHandler: NSObject)
 }
 
+/// The registrty is a container for controllers or request fullfillers.
+/// There can be one or more registries that are either initialized at the start of the application or at a later time.
 public class ResponderRegistry: NSObject, Registry {
     
     var subscribers = NSMapTable<NSString, AnyObject>(keyOptions: NSPointerFunctions.Options.strongMemory, valueOptions: NSPointerFunctions.Options.strongMemory)
@@ -22,6 +27,8 @@ public class ResponderRegistry: NSObject, Registry {
         subscribers.setObject(inputHandler as AnyObject, forKey: inputHandler.nameOfClass as NSString)
     }
     
+    /// When the transmit method is called the registry is tasked to retrieve using the request's task key and call the handler's transmit method
+    /// - parameter request: The incoming request object
     public func tx(request: Request) -> Promise<MessageContainer> {
         guard let obj = subscribers.object(forKey: request.process.key as NSString) else {
             return Promise { seal in

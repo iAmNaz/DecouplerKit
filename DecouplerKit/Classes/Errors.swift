@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Registry error specific for the registry object.
 public enum RegistryError: Error {
     case set(description: String)
 }

@@ -8,8 +8,12 @@
 
 import UIKit
 
+/// Response objects represents the product of a fulfilled request
+/// A reponse may return a payload as a view model or data model
 public struct Response: MessageContainer {
     public var process: Processable!
+    
+    /// A copy of the original request that resulted to this response
     var request: MessageContainer!
     
     private var payload: AnyObject!
