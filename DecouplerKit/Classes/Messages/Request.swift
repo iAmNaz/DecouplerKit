@@ -11,7 +11,7 @@ import UIKit
 
 /// A protocol implemented by an enum that serves as the parcel for task types.
 ///
-/// Example:
+/// ### Usage Example: ###
 ///
 ///     enum Task: Processable, Equatable {
 ///        var key: String {
@@ -25,6 +25,9 @@ import UIKit
 ///        enum FormController {}
 ///        case Form(FormController)
 ///     }
+///
+/// ### Note: ###
+/// Processable is a 1 to 1 relationship between a process class and a task category
 public protocol Processable {
     
     /// Every task used for the request and response input or output must implement the key property.
