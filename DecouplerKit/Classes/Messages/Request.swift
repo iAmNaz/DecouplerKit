@@ -69,7 +69,7 @@ public protocol MessageContainer {
 ///
 /// When a request requires pre-processing such as form validation then remote service consumption
 /// is a good example where requests are sometimes used as the response object. The process attribute may need to be adjusted so that the proper object the fulfills the succeeding tasks will be properly matched and retrieved.
-public struct Request: MessageContainer {
+public struct Request: MessageContainer, Equatable {
     public var process: Processable!
     private var payload: AnyObject!
     
@@ -82,12 +82,15 @@ public struct Request: MessageContainer {
         self.setBody(object: body)
     }
     
-    //Customize this to avoid rewriting "as AnyObject"
     mutating public func setBody<T>(object : T) {
         self.payload = object as AnyObject
     }
     
     public func body<T>() -> T {
         return self.payload as! T
+    }
+    
+    public static func == (lhs: Request, rhs: Request) -> Bool {
+        return lhs.process.key == rhs.process.key
     }
 }
