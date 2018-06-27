@@ -29,7 +29,12 @@ public struct Response: MessageContainer, Equatable {
     }
     
     public init(request: MessageContainer) {
-        self.request = request
+        self.requestCopy = request
+        self.process = self.requestCopy.process
+    }
+    
+    public func request() -> MessageContainer {
+        return requestCopy
     }
     
     //Customize this to avoid rewriting "as AnyObject"
