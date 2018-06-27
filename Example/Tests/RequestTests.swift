@@ -1,7 +1,14 @@
-import XCTest
-import DecouplerKit
+//
+//  RequestTests.swift
+//  DecouplerKit_Tests
+//
+//  Created by Nazario Mariano on 27/06/2018.
+//  Copyright © 2018 CocoaPods. All rights reserved.
+//
 
-class Tests: XCTestCase {
+import XCTest
+
+class RequestTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -15,12 +22,12 @@ class Tests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measure() {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }
