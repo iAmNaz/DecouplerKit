@@ -1,5 +1,5 @@
 //
-//  RequestTests.swift
+//  ResponseTests.swift
 //  DecouplerKit_Tests
 //
 //  Created by Nazario Mariano on 27/06/2018.
@@ -9,12 +9,7 @@
 import XCTest
 @testable import DecouplerKit_Example
 import DecouplerKit
-
-struct FormViewModel {
-    var name: String
-}
-
-class RequestTests: XCTestCase {
+class ResponseTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -29,16 +24,22 @@ class RequestTests: XCTestCase {
     func testRequestEquality() {
         let validationTask = Task.Form(.Validate(.AddSession))
         let req1 = Request(proc: validationTask)
-        let req2 = Request(proc: validationTask)
-
-        XCTAssert(req1 == req2)
+        let resp1 = Response(request: req1)
+        let resp2 = Response(request: req1)
+        XCTAssert(resp1 == resp2)
     }
     
     func testSetPayloadReturnsCorrectBody() {
         let vm = FormViewModel(name: "form")
         let validationTask = Task.Form(.Validate(.AddSession))
-        let req1 = Request(proc: validationTask, body: vm)
+        let req1 = Response(proc: validationTask, body: vm)
         let reqData: FormViewModel = req1.body()
         XCTAssert(vm.name == reqData.name)
+    }
+    
+    func testSetProcessCorrectValueSet() {
+        let validationTask = Task.Form(.Validate(.AddSession))
+        let req1 = Response(proc: validationTask)
+        XCTAssert(req1.process.key == validationTask.key)
     }
 }
