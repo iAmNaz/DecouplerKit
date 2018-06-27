@@ -52,7 +52,7 @@ class FormController: NSObject, Interface {
             }
         
          return Promise { seal in
-            seal.resolve(Response(proc: request.process), nil)
+            seal.resolve(Response(request: request), nil)
         }
     }
 }
