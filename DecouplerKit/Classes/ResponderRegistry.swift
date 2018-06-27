@@ -30,12 +30,28 @@ public class ResponderRegistry: NSObject, Registry {
     /// When the transmit method is called the registry is tasked to retrieve using the request's task key and call the handler's transmit method
     /// - parameter request: The incoming request object
     public func tx(request: Request) -> Promise<MessageContainer> {
-        guard let obj = subscribers.object(forKey: request.process.key as NSString) else {
+        guard let obj = getRegisteredEntity(withKey: request.process.key) else {
             return Promise { seal in
                 seal.reject(RegistryError.set(description: "\(request.process.key) not registered!"))
             }
         }
-        let handler = obj as! Interface
+        let handler = obj
         return handler.tx(request: request)
+    }
+    
+    /// There could be instances where checking of object membership is needed to be confirmed.
+    /// Use this method and pass the processable description to get a boolean result.
+    /// - parameter process: The Processable parameter
+    /// - Returns:
+    /// Boolean if the object is a member
+    public func isRegistered(withProcess process: Processable) -> Bool {
+        return getRegisteredEntity(withKey: process.key) != nil
+    }
+    
+    fileprivate func getRegisteredEntity(withKey key: String) -> Interface?{
+        guard let obj = subscribers.object(forKey: key as NSString) else {
+            return nil
+        }
+        return obj as? Interface
     }
 }
