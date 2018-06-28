@@ -11,10 +11,18 @@ import UIKit
 // In memory persistence
 // Edit not implemented
 class FakePersistentStoreController: NSObject, PersistentStore {
+    
     fileprivate var sessions = [ExcerciseSession]()
     
     func edit(session: ExcerciseSession) {
-        
+        for (index, item) in sessions.enumerated() {
+            if item == session {
+                var match = sessions[index]
+                    match.date = session.date
+                    match.duration = session.duration
+                    match.name = session.name
+            }
+        }
     }
     
     func add(session: ExcerciseSession) {
@@ -29,7 +37,6 @@ class FakePersistentStoreController: NSObject, PersistentStore {
         var deleted: ExcerciseSession?
         
         for (index, item) in sessions.enumerated() {
-            print("Found \(item) at position \(index)")
             if item == session {
                 sessions.remove(at: index)
                 deleted = session
