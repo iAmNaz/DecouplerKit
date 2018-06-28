@@ -9,14 +9,17 @@
 import UIKit
 import DecouplerKit
 
+let keyExerciseController = "ExerciseController"
+let keyFormController = "FormController"
+
 enum Task: Processable, Equatable {
     var key: String {
         get {
             switch self {
             case .Exercise( _):
-                return "ExerciseController"
+                return keyExerciseController
             case .Form( _):
-                return "FormController"
+                return keyFormController
             }
         }
     }
@@ -34,6 +37,7 @@ enum Task: Processable, Equatable {
     enum FormController {
         enum Forms {
             case AddSession
+            case DeleteSession
         }
         case Validate(Forms)
     }
