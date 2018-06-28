@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             formattter.dateStyle = .medium
         let exerciseController = ExerciseController()
             exerciseController.dateFormatter = formattter
-            exerciseController.dataStoreController = RealmPersistentStoreController()
+            exerciseController.dataStoreController = FakePersistentStoreController()
         let formController = FormController()
         
         registry.register(inputHandler: exerciseController)
