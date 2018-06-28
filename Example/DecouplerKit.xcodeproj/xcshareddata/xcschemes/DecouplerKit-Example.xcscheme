@@ -51,6 +51,13 @@
             BlueprintName = "DecouplerKit"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
+            BuildableName = "DecouplerKit_Example.app"
+            BlueprintName = "DecouplerKit_Example"
+            ReferencedContainer = "container:DecouplerKit.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
          <TestableReference
