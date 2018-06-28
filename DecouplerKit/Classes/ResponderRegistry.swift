@@ -21,6 +21,8 @@ public protocol Registry: Interface {
 public class ResponderRegistry: NSObject, Registry {
     
     var subscribers = NSMapTable<NSString, AnyObject>(keyOptions: NSPointerFunctions.Options.strongMemory, valueOptions: NSPointerFunctions.Options.strongMemory)
+    
+    // TODO: Reconsider if singleton is an option
     public static let shared = ResponderRegistry()
     
     public func register(inputHandler: NSObject) {
