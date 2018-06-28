@@ -48,7 +48,9 @@ enum Task: Processable, Equatable {
             return task1 == task2
         case (let .Form(.Validate(task1)), let .Form(.Validate(task2))):
             return task1 == task2
-        default:
+        case (.Form(_), .Exercise(_)):
+            return false
+        case (.Exercise(_), .Form(_)):
             return false
         }
     }
