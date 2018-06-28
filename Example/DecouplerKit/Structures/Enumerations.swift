@@ -24,22 +24,22 @@ enum Task: Processable, Equatable {
         }
     }
     
-    enum WorkoutController {
+    case Exercise(ExerciseController)
+    case Form(FormController)
+    
+    enum ExerciseController {
         case list
         case add
         case edit
         case delete
     }
     
-    case Exercise(WorkoutController)
-    case Form(FormController)
-    
     enum FormController {
+        case Validate(Forms)
         enum Forms {
             case AddSession
             case DeleteSession
         }
-        case Validate(Forms)
     }
     
     static func == (lhs: Task, rhs: Task) -> Bool {
