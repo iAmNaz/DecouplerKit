@@ -20,16 +20,39 @@ class TaskTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testTaskReturnCorrectKey() {
+        let keyForExercise = Task.Exercise(.add).key
+        let keyForForm = Task.Form(.Validate(.AddSession)).key
+        
+        XCTAssertTrue(keyFormController == keyForForm && keyExerciseController == keyForExercise)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testExerciseEquality() {
+        let ex1 = Task.Exercise(.add)
+        let ex2 = Task.Exercise(.add)
+        
+        XCTAssertTrue(ex1 == ex2)
     }
     
+    func testExerciseInEquality() {
+        let ex1 = Task.Exercise(.add)
+        let ex2 = Task.Exercise(.delete)
+        
+        XCTAssertFalse(ex1 == ex2)
+    }
+    
+    func testFormEquality() {
+        let form1 = Task.Form(.Validate(.AddSession))
+        let form2 = Task.Form(.Validate(.AddSession))
+        
+        XCTAssertTrue(form1 == form2)
+    }
+
+    func testFormInEquality() {
+        let form1 = Task.Form(.Validate(.AddSession))
+        let form2 = Task.Form(.Validate(.DeleteSession))
+        
+        XCTAssertFalse(form1 == form2)
+    }
+
 }
