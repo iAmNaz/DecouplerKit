@@ -55,4 +55,16 @@ class TaskTests: XCTestCase {
         XCTAssertFalse(form1 == form2)
     }
 
+    func testFormExerciseEquality() {
+        let form = Task.Form(.Validate(.AddSession))
+        let exercise = Task.Exercise(.add)
+        XCTAssertFalse(form == exercise)
+    }
+    
+    func testExerciseFormEquality() {
+        let form = Task.Form(.Validate(.AddSession))
+        let exercise = Task.Exercise(.add)
+        XCTAssertFalse(exercise == form)
+    }
+
 }
