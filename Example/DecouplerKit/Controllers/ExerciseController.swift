@@ -57,13 +57,13 @@ class ExerciseController: NSObject, Interface {
         let composerData = request.body() as ExerciseSessionViewModel
         let session = sessionVMtoData(vm: composerData)
     
-        guard let sessionToDelete = dataStoreController.delete(session: session) else {
+        guard let _ = dataStoreController.delete(session: session) else {
             return Promise { seal in
                 seal.reject(AppError.sessionManagement(.notFound))
             }
         }
         
-        let response = Response(proc: request.process, body: sessionToDelete)
+        let response = Response(proc: request.process, body: composerData)
         return Promise { seal in
             seal.resolve(response, nil)
         }
