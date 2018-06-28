@@ -41,16 +41,8 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A57DE995F8AD436757C26021711BAF92"
-            BuildableName = "DecouplerKit.framework"
-            BlueprintName = "DecouplerKit"
-            ReferencedContainer = "container:Pods/Pods.xcodeproj">
-         </BuildableReference>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
@@ -67,6 +59,16 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "DecouplerKit_Tests.xctest"
                BlueprintName = "DecouplerKit_Tests"
+               ReferencedContainer = "container:DecouplerKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "455CE4E520E4FC6200F11CE3"
+               BuildableName = "DecouplerKit_ExampleUITests.xctest"
+               BlueprintName = "DecouplerKit_ExampleUITests"
                ReferencedContainer = "container:DecouplerKit.xcodeproj">
             </BuildableReference>
          </TestableReference>

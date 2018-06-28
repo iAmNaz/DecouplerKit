@@ -20,18 +20,31 @@
 		4518199920CA5D3F000238F4 /* FormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198A20CA5D3F000238F4 /* FormController.swift */; };
 		4518199A20CA5D3F000238F4 /* FakePersistentStoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198B20CA5D3F000238F4 /* FakePersistentStoreController.swift */; };
 		4518199B20CA5D3F000238F4 /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198C20CA5D3F000238F4 /* ExerciseController.swift */; };
-		4518199C20CA5D3F000238F4 /* RealmPersistentStoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198D20CA5D3F000238F4 /* RealmPersistentStoreController.swift */; };
 		4518199D20CA5D3F000238F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198E20CA5D3F000238F4 /* AppDelegate.swift */; };
 		4552715320E34FDA001BC6B6 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518197D20CA5D3E000238F4 /* Enumerations.swift */; };
 		4552715620E38010001BC6B6 /* FormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198A20CA5D3F000238F4 /* FormController.swift */; };
 		4552715720E3802B001BC6B6 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518197F20CA5D3E000238F4 /* Errors.swift */; };
-		4552715820E38044001BC6B6 /* ExerciseSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198620CA5D3F000238F4 /* ExerciseSessionViewModel.swift */; };
+		455CE4CA20E4C4DC00F11CE3 /* ExerciseControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CE4C920E4C4DC00F11CE3 /* ExerciseControllerTests.swift */; };
+		455CE4CB20E4C5E900F11CE3 /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198C20CA5D3F000238F4 /* ExerciseController.swift */; };
+		455CE4CC20E4C74C00F11CE3 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518197E20CA5D3E000238F4 /* Protocols.swift */; };
+		455CE4CD20E4C75700F11CE3 /* ExerciseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198820CA5D3F000238F4 /* ExerciseSession.swift */; };
+		455CE4CE20E4C89F00F11CE3 /* FakePersistentStoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198B20CA5D3F000238F4 /* FakePersistentStoreController.swift */; };
+		455CE4D120E4D3E500F11CE3 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CE4D020E4D3E500F11CE3 /* Util.swift */; };
+		455CE4D220E4D4D300F11CE3 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CE4D020E4D3E500F11CE3 /* Util.swift */; };
+		455CE4DC20E4F81300F11CE3 /* ComposerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198120CA5D3F000238F4 /* ComposerContainerViewController.swift */; };
+		455CE4DD20E4F81300F11CE3 /* ExerciseComposerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198220CA5D3F000238F4 /* ExerciseComposerTableViewController.swift */; };
+		455CE4DE20E4F81300F11CE3 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198420CA5D3F000238F4 /* HomeTableViewController.swift */; };
+		455CE4DF20E4F81300F11CE3 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198520CA5D3F000238F4 /* DateViewController.swift */; };
+		455CE4E020E4F81300F11CE3 /* ExerciseSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4518198620CA5D3F000238F4 /* ExerciseSessionViewModel.swift */; };
+		455CE4E120E4F93A00F11CE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		455CE4E920E4FC6200F11CE3 /* DecouplerKit_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455CE4E820E4FC6200F11CE3 /* DecouplerKit_ExampleUITests.swift */; };
 		457E638E20E48F54002DB5AF /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E638320E48F02002DB5AF /* RequestTests.swift */; };
 		457E638F20E48F54002DB5AF /* RegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E638420E48F02002DB5AF /* RegistryTests.swift */; };
 		457E639020E48F54002DB5AF /* RegistryErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E638520E48F02002DB5AF /* RegistryErrorTests.swift */; };
 		457E639120E48F54002DB5AF /* UtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E638620E48F02002DB5AF /* UtilityTests.swift */; };
 		457E639220E48F54002DB5AF /* ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E638720E48F02002DB5AF /* ResponseTests.swift */; };
 		457E639420E48FD1002DB5AF /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E639320E48FD1002DB5AF /* TaskTests.swift */; };
+		457E639620E49F07002DB5AF /* FormControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E639520E49F07002DB5AF /* FormControllerTests.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -39,6 +52,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		455CE4EB20E4FC6200F11CE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = DecouplerKit_Example;
+		};
 		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
@@ -64,12 +84,18 @@
 		4518198C20CA5D3F000238F4 /* ExerciseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
 		4518198D20CA5D3F000238F4 /* RealmPersistentStoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmPersistentStoreController.swift; sourceTree = "<group>"; };
 		4518198E20CA5D3F000238F4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		455CE4C920E4C4DC00F11CE3 /* ExerciseControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseControllerTests.swift; sourceTree = "<group>"; };
+		455CE4D020E4D3E500F11CE3 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		455CE4E620E4FC6200F11CE3 /* DecouplerKit_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecouplerKit_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		455CE4E820E4FC6200F11CE3 /* DecouplerKit_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecouplerKit_ExampleUITests.swift; sourceTree = "<group>"; };
+		455CE4EA20E4FC6200F11CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		457E638320E48F02002DB5AF /* RequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
 		457E638420E48F02002DB5AF /* RegistryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistryTests.swift; sourceTree = "<group>"; };
 		457E638520E48F02002DB5AF /* RegistryErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistryErrorTests.swift; sourceTree = "<group>"; };
 		457E638620E48F02002DB5AF /* UtilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityTests.swift; sourceTree = "<group>"; };
 		457E638720E48F02002DB5AF /* ResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseTests.swift; sourceTree = "<group>"; };
 		457E639320E48FD1002DB5AF /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
+		457E639520E49F07002DB5AF /* FormControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormControllerTests.swift; sourceTree = "<group>"; };
 		4CC53C573BF97271B534F4E4 /* Pods-DecouplerKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DecouplerKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DecouplerKit_Tests/Pods-DecouplerKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		56BCA9A7A112B92014DB0A19 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* DecouplerKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecouplerKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +114,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		455CE4E320E4FC6200F11CE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,10 +188,29 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		455CE4CF20E4D3CB00F11CE3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				455CE4D020E4D3E500F11CE3 /* Util.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		455CE4E720E4FC6200F11CE3 /* DecouplerKit_ExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				455CE4E820E4FC6200F11CE3 /* DecouplerKit_ExampleUITests.swift */,
+				455CE4EA20E4FC6200F11CE3 /* Info.plist */,
+			);
+			path = DecouplerKit_ExampleUITests;
+			sourceTree = "<group>";
+		};
 		457E638120E48E46002DB5AF /* DemoTests */ = {
 			isa = PBXGroup;
 			children = (
 				457E639320E48FD1002DB5AF /* TaskTests.swift */,
+				457E639520E49F07002DB5AF /* FormControllerTests.swift */,
+				455CE4C920E4C4DC00F11CE3 /* ExerciseControllerTests.swift */,
 			);
 			path = DemoTests;
 			sourceTree = "<group>";
@@ -181,6 +233,7 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for DecouplerKit */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				455CE4E720E4FC6200F11CE3 /* DecouplerKit_ExampleUITests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				9ADF81AED595471FFFB80A27 /* Pods */,
 				6DCB918BF7614474F0502950 /* Frameworks */,
@@ -192,6 +245,7 @@
 			children = (
 				607FACD01AFB9204008FA782 /* DecouplerKit_Example.app */,
 				607FACE51AFB9204008FA782 /* DecouplerKit_Tests.xctest */,
+				455CE4E620E4FC6200F11CE3 /* DecouplerKit_ExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				4518198E20CA5D3F000238F4 /* AppDelegate.swift */,
+				455CE4CF20E4D3CB00F11CE3 /* Common */,
 				4553568A20CE4FD30039DDB8 /* Services */,
 				4518198920CA5D3F000238F4 /* Controllers */,
 				4518198720CA5D3F000238F4 /* Entities */,
@@ -273,6 +328,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		455CE4E520E4FC6200F11CE3 /* DecouplerKit_ExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 455CE4ED20E4FC6200F11CE3 /* Build configuration list for PBXNativeTarget "DecouplerKit_ExampleUITests" */;
+			buildPhases = (
+				455CE4E220E4FC6200F11CE3 /* Sources */,
+				455CE4E320E4FC6200F11CE3 /* Frameworks */,
+				455CE4E420E4FC6200F11CE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				455CE4EC20E4FC6200F11CE3 /* PBXTargetDependency */,
+			);
+			name = DecouplerKit_ExampleUITests;
+			productName = DecouplerKit_ExampleUITests;
+			productReference = 455CE4E620E4FC6200F11CE3 /* DecouplerKit_ExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		607FACCF1AFB9204008FA782 /* DecouplerKit_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "DecouplerKit_Example" */;
@@ -318,10 +391,15 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					455CE4E520E4FC6200F11CE3 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0930;
@@ -348,11 +426,19 @@
 			targets = (
 				607FACCF1AFB9204008FA782 /* DecouplerKit_Example */,
 				607FACE41AFB9204008FA782 /* DecouplerKit_Tests */,
+				455CE4E520E4FC6200F11CE3 /* DecouplerKit_ExampleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		455CE4E420E4FC6200F11CE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,6 +453,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455CE4E120E4F93A00F11CE3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +471,8 @@
 				"${BUILT_PRODUCTS_DIR}/Dip/Dip.framework",
 				"${BUILT_PRODUCTS_DIR}/Dip-UI/Dip_UI.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -391,6 +480,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Dip_UI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -464,17 +555,25 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		455CE4E220E4FC6200F11CE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455CE4E920E4FC6200F11CE3 /* DecouplerKit_ExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4518199620CA5D3F000238F4 /* DateViewController.swift in Sources */,
-				4518199C20CA5D3F000238F4 /* RealmPersistentStoreController.swift in Sources */,
 				4518199D20CA5D3F000238F4 /* AppDelegate.swift in Sources */,
 				4518198F20CA5D3F000238F4 /* Enumerations.swift in Sources */,
 				4518199A20CA5D3F000238F4 /* FakePersistentStoreController.swift in Sources */,
 				4518199120CA5D3F000238F4 /* Errors.swift in Sources */,
 				4518199B20CA5D3F000238F4 /* ExerciseController.swift in Sources */,
+				455CE4D120E4D3E500F11CE3 /* Util.swift in Sources */,
 				4518199720CA5D3F000238F4 /* ExerciseSessionViewModel.swift in Sources */,
 				4518199320CA5D3F000238F4 /* ExerciseComposerTableViewController.swift in Sources */,
 				4518199520CA5D3F000238F4 /* HomeTableViewController.swift in Sources */,
@@ -490,21 +589,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				457E638E20E48F54002DB5AF /* RequestTests.swift in Sources */,
-				4552715820E38044001BC6B6 /* ExerciseSessionViewModel.swift in Sources */,
+				457E639620E49F07002DB5AF /* FormControllerTests.swift in Sources */,
+				455CE4CD20E4C75700F11CE3 /* ExerciseSession.swift in Sources */,
 				4552715320E34FDA001BC6B6 /* Enumerations.swift in Sources */,
 				4552715720E3802B001BC6B6 /* Errors.swift in Sources */,
+				455CE4E020E4F81300F11CE3 /* ExerciseSessionViewModel.swift in Sources */,
+				455CE4D220E4D4D300F11CE3 /* Util.swift in Sources */,
+				455CE4DD20E4F81300F11CE3 /* ExerciseComposerTableViewController.swift in Sources */,
+				455CE4CB20E4C5E900F11CE3 /* ExerciseController.swift in Sources */,
+				455CE4DC20E4F81300F11CE3 /* ComposerContainerViewController.swift in Sources */,
+				455CE4DF20E4F81300F11CE3 /* DateViewController.swift in Sources */,
 				457E639220E48F54002DB5AF /* ResponseTests.swift in Sources */,
 				457E639120E48F54002DB5AF /* UtilityTests.swift in Sources */,
+				455CE4CA20E4C4DC00F11CE3 /* ExerciseControllerTests.swift in Sources */,
+				455CE4CC20E4C74C00F11CE3 /* Protocols.swift in Sources */,
 				457E639420E48FD1002DB5AF /* TaskTests.swift in Sources */,
 				457E638F20E48F54002DB5AF /* RegistryTests.swift in Sources */,
 				4552715620E38010001BC6B6 /* FormController.swift in Sources */,
+				455CE4DE20E4F81300F11CE3 /* HomeTableViewController.swift in Sources */,
 				457E639020E48F54002DB5AF /* RegistryErrorTests.swift in Sources */,
+				455CE4CE20E4C89F00F11CE3 /* FakePersistentStoreController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		455CE4EC20E4FC6200F11CE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* DecouplerKit_Example */;
+			targetProxy = 455CE4EB20E4FC6200F11CE3 /* PBXContainerItemProxy */;
+		};
 		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* DecouplerKit_Example */;
@@ -532,6 +647,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		455CE4EE20E4FC6200F11CE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = DecouplerKit_ExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wylog.reu.DecouplerKit-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DecouplerKit_Example;
+			};
+			name = Debug;
+		};
+		455CE4EF20E4FC6200F11CE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = DecouplerKit_ExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wylog.reu.DecouplerKit-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DecouplerKit_Example;
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -711,6 +876,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		455CE4ED20E4FC6200F11CE3 /* Build configuration list for PBXNativeTarget "DecouplerKit_ExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				455CE4EE20E4FC6200F11CE3 /* Debug */,
+				455CE4EF20E4FC6200F11CE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "DecouplerKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
