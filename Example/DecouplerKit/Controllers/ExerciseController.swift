@@ -82,12 +82,12 @@ class ExerciseController: NSObject, Interface {
     }
     
     fileprivate func dataToSessionVM(data: ExcerciseSession)-> ExerciseSessionViewModel {
-        let vm = ExerciseSessionViewModel(dateFormatter: dateFormatter, name: data.name, date: data.date, duration: data.duration)
+        let vm = ExerciseSessionViewModel(dateFormatter: dateFormatter, uniqueId: data.uniqueId, name: data.name, date: data.date, duration: data.duration)
         return vm
     }
     
     fileprivate func sessionVMtoData(vm: ExerciseSessionViewModel) -> ExcerciseSession {
-        let session = ExcerciseSession(name: vm.name!, duration: vm.duration!, date: vm.date!)
+        let session = ExcerciseSession(uniqueId: vm.uniqueId, name: vm.name!, duration: vm.duration!, date: vm.date!)
         return session
     }
 }

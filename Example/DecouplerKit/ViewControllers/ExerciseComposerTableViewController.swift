@@ -83,7 +83,7 @@ class ExerciseComposerTableViewController: UITableViewController {
             dateLbl.text = session?.formattedDate()
             sessionChanged()
         }else {
-            session = ExerciseSessionViewModel(dateFormatter: dateFormatter, name: nil, date: date, duration: nil)
+            session = ExerciseSessionViewModel(dateFormatter: dateFormatter, uniqueId: uniqueID(), name: nil, date: date, duration: nil)
             date = Date()
         }
     }
@@ -91,7 +91,6 @@ class ExerciseComposerTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.parentVC = self.presentingViewController
-        
     }
     
     override func didReceiveMemoryWarning() {

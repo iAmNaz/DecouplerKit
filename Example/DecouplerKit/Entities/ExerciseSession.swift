@@ -9,14 +9,12 @@
 import UIKit
 
 struct ExcerciseSession: Equatable {
+    var uniqueId: String
     var name: String
     var duration: Date
     var date: Date
     
     static func == (lhs: ExcerciseSession, rhs: ExcerciseSession) -> Bool {
-        if lhs.name == rhs.name && lhs.duration == rhs.duration && lhs.date == rhs.date {
-            return true
-        }
-        return false
+        return lhs.uniqueId == rhs.uniqueId
     }
 }

@@ -10,12 +10,13 @@ import UIKit
 import RealmSwift
 
 class Exercise: Object {
+    @objc dynamic var uniqueId: String!
     @objc dynamic var name: String!
     @objc dynamic var date: Date!
     @objc dynamic var duration: Date!
     
     func toExerciseSession() -> ExcerciseSession {
-        return ExcerciseSession(name: name, duration: duration, date: date)
+        return ExcerciseSession(uniqueId: uniqueId, name: name, duration: duration, date: date)
     }
 }
 

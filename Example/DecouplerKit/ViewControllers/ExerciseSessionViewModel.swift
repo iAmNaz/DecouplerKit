@@ -8,8 +8,9 @@
 
 import UIKit
 
-struct ExerciseSessionViewModel {
+struct ExerciseSessionViewModel: Equatable {
     var dateFormatter: DateFormatter
+    var uniqueId: String
     var name: String?
     var date: Date?
     var duration: Date?
@@ -24,5 +25,9 @@ struct ExerciseSessionViewModel {
             return "\(hr) hrs \(min) mins"
         }
         return ""
+    }
+    
+    static func == (lhs: ExerciseSessionViewModel, rhs: ExerciseSessionViewModel) -> Bool {
+        return lhs.uniqueId == rhs.uniqueId
     }
 }
