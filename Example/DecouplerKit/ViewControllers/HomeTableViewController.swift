@@ -25,10 +25,13 @@ class HomeTableViewController: UITableViewController {
         }.done { response in
             self.sessions = response.body()
             self.tableView.reloadData()
-            print(self.sessions)
         }.catch { (error) in
             
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

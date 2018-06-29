@@ -21,6 +21,7 @@ class FakePersistentStoreController: NSObject, PersistentStore {
                     match.date = session.date
                     match.duration = session.duration
                     match.name = session.name
+                sessions[index] = match
             }
         }
     }
