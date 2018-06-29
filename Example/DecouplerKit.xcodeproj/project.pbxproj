@@ -153,9 +153,9 @@
 		4518198020CA5D3F000238F4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4518198420CA5D3F000238F4 /* HomeTableViewController.swift */,
 				4518198120CA5D3F000238F4 /* ComposerContainerViewController.swift */,
 				4518198220CA5D3F000238F4 /* ExerciseComposerTableViewController.swift */,
-				4518198420CA5D3F000238F4 /* HomeTableViewController.swift */,
 				4518198520CA5D3F000238F4 /* DateViewController.swift */,
 				4518198620CA5D3F000238F4 /* ExerciseSessionViewModel.swift */,
 			);

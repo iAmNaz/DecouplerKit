@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CKX-k2-QKX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CKX-k2-QKX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -52,7 +52,7 @@
                             <outlet property="delegate" destination="Hcc-iN-xwr" id="zkb-pv-YFZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Excercise Tracker" largeTitleDisplayMode="always" id="6ta-SO-Iw6">
+                    <navigationItem key="navigationItem" title="Exercise Tracker" largeTitleDisplayMode="always" id="6ta-SO-Iw6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="b9J-M6-swS">
                             <connections>
                                 <segue destination="s8i-eX-aXd" kind="presentation" id="tv9-Wz-i0V"/>
@@ -142,6 +142,7 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="type exercise name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iG6-aL-Mbp">
                                                     <rect key="frame" x="16" y="6" width="343" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="nametf"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="tm8-9b-1TL"/>
                                                     </constraints>
@@ -161,6 +162,7 @@
                                                 <constraint firstItem="iG6-aL-Mbp" firstAttribute="leading" secondItem="ot2-QI-DUJ" secondAttribute="leading" constant="16" id="vQq-u1-Qp5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="name cell"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -189,6 +191,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="duration cell"/>
                                         <connections>
                                             <segue destination="M8f-zW-VgS" kind="presentation" identifier="toDurationPicker" id="UYw-Wh-97L"/>
                                         </connections>
@@ -220,6 +223,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="date cell"/>
                                         <connections>
                                             <segue destination="M8f-zW-VgS" kind="presentation" identifier="toDatePicker" id="V1b-2X-xkb"/>
                                         </connections>
