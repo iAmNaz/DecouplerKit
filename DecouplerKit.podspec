@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DecouplerKit'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A lightweight library for implementing very simple decoupled code.'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'DecouplerKit/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'DecouplerKit' => ['DecouplerKit/Assets/*.png']
   # }
@@ -39,7 +39,7 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'Dip', '6.1'
+  s.dependency 'Dip', '7.0.0'
   s.dependency 'Dip-UI', '2.0'
   s.dependency 'PromiseKit', '6.3.3'
 end
