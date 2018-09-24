@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'DecouplerKit/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'DecouplerKit' => ['DecouplerKit/Assets/*.png']
   # }
@@ -40,6 +40,5 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'Dip', '7.0.0'
-  s.dependency 'Dip-UI'
-  s.dependency 'PromiseKit'
+  s.dependency 'PromiseKit', '6.3.3'
 end

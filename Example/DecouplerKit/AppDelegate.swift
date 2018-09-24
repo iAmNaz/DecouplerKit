@@ -8,7 +8,6 @@
 
 import UIKit
 import Dip
-import Dip_UI
 import DecouplerKit
 
 extension HomeTableViewController: StoryboardInstantiatable { }
