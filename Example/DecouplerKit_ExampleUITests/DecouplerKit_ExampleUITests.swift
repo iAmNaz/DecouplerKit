@@ -50,12 +50,13 @@ class DecouplerKit_ExampleUITests: XCTestCase {
     
     func setDuration(hour: String, minute: String) {
         openDurationPicker()
-        app.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: hour)
-        app.pickerWheels.element(boundBy: 1).adjust(toPickerWheelValue: minute)
+        app.pickerWheels["1 min"].adjust(toPickerWheelValue: minute)
+        app.pickerWheels["0 hours"].adjust(toPickerWheelValue: hour)
     }
     
     func setDate(date: String, hour: String, minute: String, ampm: String) {
         openDatePicker()
+        
         app.datePickers.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: date)
         app.datePickers.pickerWheels.element(boundBy: 1).adjust(toPickerWheelValue: hour)
         app.datePickers.pickerWheels.element(boundBy: 2).adjust(toPickerWheelValue: minute)
