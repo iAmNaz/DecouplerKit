@@ -13,9 +13,16 @@ var launched = false // we want to launch the app once for this test
 class DecouplerKit_ExampleUITests: XCTestCase {
 
     let app = XCUIApplication()
+    var currentMonth: String!
     
     override func setUp() {
         super.setUp()
+        
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM"
+        currentMonth = dateFormatter.string(from: now)
+        
         continueAfterFailure = false
 
         if launched {
@@ -91,7 +98,8 @@ class DecouplerKit_ExampleUITests: XCTestCase {
     // Important!:
     //Test names should be in alpha order if you want tests to be sequential
     func test1dd() {
-        newExercise(name: "squat", duration: (hour: "1", minute: "30"), date: (date: "Jun 30",hour: "4", minute: "36", ampm: "PM"))
+        let date = currentMonth + " 30"
+        newExercise(name: "squat", duration: (hour: "1", minute: "30"), date: (date: date,hour: "4", minute: "36", ampm: "PM"))
         saveChanges()
         XCTAssert(exerciseCell(atIndex: 0).staticTexts["squat"].exists)
     }
@@ -110,16 +118,18 @@ class DecouplerKit_ExampleUITests: XCTestCase {
     }
     
     func test4AddAndCancelled() {
-        newExercise(name: "jumping jack", duration: (hour: "0", minute: "10"), date: (date: "Jul 1", hour: "3", minute: "22", ampm: "AM"))
+        let date = currentMonth + " 1"
+        newExercise(name: "jumping jack", duration: (hour: "0", minute: "10"), date: (date: date, hour: "3", minute: "22", ampm: "AM"))
         cancelAdd()
         XCTAssert(!app.tables.cells.element(boundBy: 0).exists)
     }
     
     func test5AddAndSavedCorrectly() {
-        newExercise(name: "seated row", duration: (hour: "0", minute: "10"), date: (date: "Jul 5", hour: "3", minute: "22", ampm: "AM"))
+        let date = currentMonth + " 5"
+        newExercise(name: "seated row", duration: (hour: "0", minute: "10"), date: (date: date, hour: "3", minute: "22", ampm: "AM"))
         saveChanges()
         XCTAssert(app.tables.cells.element(boundBy: 0).exists)
-        let rows = app.tables.cells.containing(NSPredicate(format: "label CONTAINS 'Jul 5'"))
+        let rows = app.tables.cells.containing(NSPredicate(format: "label CONTAINS '\(date)'"))
         XCTAssert(rows.count > 0)
     }
 }
