@@ -1,9 +1,8 @@
 # DecouplerKit
 
-[![CI Status](https://img.shields.io/travis/iamnaz/DecouplerKit.svg?style=flat)](https://travis-ci.org/iamnaz/DecouplerKit)
-[![Version](https://img.shields.io/cocoapods/v/DecouplerKit.svg?style=flat)](https://cocoapods.org/pods/DecouplerKit)
-[![License](https://img.shields.io/cocoapods/l/DecouplerKit.svg?style=flat)](https://cocoapods.org/pods/DecouplerKit)
-[![Platform](https://img.shields.io/cocoapods/p/DecouplerKit.svg?style=flat)](https://cocoapods.org/pods/DecouplerKit)
+###Update
+- Compatibility with XCode 10 and Swift 4.2
+
 
 ## Features
 - Single interface for your user interface and worker classes and controllers
