@@ -1,12 +1,12 @@
 # DecouplerKit
 
-###Update
+#### Update
 - Compatibility with XCode 10 and Swift 4.2
 
 
 ## Features
 - Single interface for your user interface and worker classes and controllers
-- Asynch and sync task friendly
+- Async and sync task friendly
 - Easier to test as it encourages decoupled code and methods are generally functional 
 - Uses PromiseKit to properly wrap requests and responses
 - Use cases scenarios are documented as enums
@@ -44,8 +44,8 @@ pod 'DecouplerKit', :path => 'to Decoupler path/'
 
 ## Author
 
-iamnaz
+[iamnaz](https://github.com/iAmNaz)
 
 ## License
 
-DecouplerKit is available under the MIT license. See the LICENSE file for more info.
+DecouplerKit is available under the MIT license. See the [LICENSE](https://github.com/iAmNaz/DecouplerKit/blob/master/LICENSE) file for more info.
