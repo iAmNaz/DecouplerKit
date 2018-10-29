@@ -31,6 +31,7 @@ public class ResponderRegistry: NSObject, Registry {
     
     /// When the transmit method is called the registry is tasked to retrieve using the request's task key and call the handler's transmit method
     /// - parameter request: The incoming request object
+    @discardableResult
     public func tx(request: Request) -> Promise<MessageContainer> {
         guard let obj = getRegisteredEntity(withKey: request.process.key) else {
             return Promise { seal in
