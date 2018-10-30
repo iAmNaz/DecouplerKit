@@ -18,21 +18,26 @@ public protocol Registry: Interface {
 
 /// The registrty is a container for controllers or request fullfillers.
 /// There can be one or more registries that are either initialized at the start of the application or at a later time.
-public class ResponderRegistry: NSObject, Registry {
+open class ResponderRegistry: NSObject, Registry {
     
     var subscribers = NSMapTable<NSString, AnyObject>(keyOptions: NSPointerFunctions.Options.strongMemory, valueOptions: NSPointerFunctions.Options.strongMemory)
     
     // TODO: Reconsider if singleton is an option
     public static let shared = ResponderRegistry()
     
-    public func register(inputHandler: NSObject) {
+    // Use this to register an object
+    open func register(inputHandler: NSObject) {
         subscribers.setObject(inputHandler as AnyObject, forKey: inputHandler.nameOfClass as NSString)
+    }
+    
+    open func register(inputHandler: NSObject, withKey key: String) {
+        subscribers.setObject(inputHandler as AnyObject, forKey: key as NSString)
     }
     
     /// When the transmit method is called the registry is tasked to retrieve using the request's task key and call the handler's transmit method
     /// - parameter request: The incoming request object
     @discardableResult
-    public func tx(request: Request) -> Promise<MessageContainer> {
+    open func tx(request: Request) -> Promise<MessageContainer> {
         guard let obj = getRegisteredEntity(withKey: request.process.key) else {
             return Promise { seal in
                 seal.reject(RegistryError.set(description: "\(request.process.key) not registered!"))
