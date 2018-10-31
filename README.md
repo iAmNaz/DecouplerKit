@@ -44,7 +44,7 @@ pod 'DecouplerKit', :path => 'to Decoupler path/'
 
 ## Author
 
-[iamnaz](https://github.com/iAmNaz)
+[iAmNaz](https://github.com/iAmNaz)
 
 ## License
 
