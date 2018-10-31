@@ -22,8 +22,7 @@ open class ResponderRegistry: NSObject, Registry {
     
     var subscribers = NSMapTable<NSString, AnyObject>(keyOptions: NSPointerFunctions.Options.strongMemory, valueOptions: NSPointerFunctions.Options.strongMemory)
     
-    // TODO: Reconsider if singleton is an option
-    public static let shared = ResponderRegistry()
+    var subscribers = NSMapTable<NSString, AnyObject>(keyOptions: NSPointerFunctions.Options.strongMemory, valueOptions: NSPointerFunctions.Options.strongMemory)
     
     // Use this to register an object
     open func register(inputHandler: NSObject) {
