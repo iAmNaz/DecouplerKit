@@ -32,7 +32,7 @@ class ComposerContainerViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editorContainer" {
-            childVC = segue.destination as! ExerciseComposerTableViewController
+            childVC = segue.destination as? ExerciseComposerTableViewController
             childVC.saveBtn = saveBtn
             childVC.session = session
         }
