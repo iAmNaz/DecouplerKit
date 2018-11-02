@@ -21,9 +21,7 @@ public protocol Registry: Interface {
 open class ResponderRegistry: NSObject, Registry {
     
     var subscribers = NSMapTable<NSString, AnyObject>(keyOptions: NSPointerFunctions.Options.strongMemory, valueOptions: NSPointerFunctions.Options.strongMemory)
-    
-    var subscribers = NSMapTable<NSString, AnyObject>(keyOptions: NSPointerFunctions.Options.strongMemory, valueOptions: NSPointerFunctions.Options.strongMemory)
-    
+        
     // Use this to register an object
     open func register(inputHandler: NSObject) {
         subscribers.setObject(inputHandler as AnyObject, forKey: inputHandler.nameOfClass as NSString)
