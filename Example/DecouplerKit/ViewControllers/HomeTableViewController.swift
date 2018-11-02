@@ -95,6 +95,8 @@ class HomeTableViewController: UITableViewController {
         let deleteRequest = Request(proc: Task.Exercise(.delete), body: exercise)
         registry.tx(request: deleteRequest).done { (response) in
             let _  = response
+            } .catch { (error) in
+                
         }
     }
 }
