@@ -21,12 +21,18 @@ public protocol Registry: Interface {
 open class ResponderRegistry: NSObject, Registry {
     
     var subscribers = NSMapTable<NSString, AnyObject>(keyOptions: NSPointerFunctions.Options.strongMemory, valueOptions: NSPointerFunctions.Options.strongMemory)
-        
+    
     // Use this to register an object
     open func register(inputHandler: NSObject) {
         subscribers.setObject(inputHandler as AnyObject, forKey: inputHandler.nameOfClass as NSString)
     }
     
+    /// For classes that simpley inherits from NSObject (Objective C) the class name is resolved correctly.
+    /// In Swift the string name is not the same as the actual class and therefore different from
+    /// the key you migh have used. To avoid that uncertainty a key parameter was added to be sure
+    /// your object is registered with a key you expect that would retrieve the object.
+    /// - parameter key: The string key used to register and retrieve the registered object
+    /// instance
     open func register(inputHandler: NSObject, withKey key: String) {
         subscribers.setObject(inputHandler as AnyObject, forKey: key as NSString)
     }
