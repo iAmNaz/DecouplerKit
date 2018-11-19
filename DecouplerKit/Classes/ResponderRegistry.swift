@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PromiseKit
+@_exported import PromiseKit
 
 /// A protocol implemented by the ResponderRegistry calss
 public protocol Registry: Interface {
@@ -24,17 +24,26 @@ open class ResponderRegistry: NSObject, Registry {
     
     // Use this to register an object
     open func register(inputHandler: NSObject) {
-        subscribers.setObject(inputHandler as AnyObject, forKey: inputHandler.nameOfClass as NSString)
+        let key = inputHandler.nameOfClass as NSString
+        if inputHandler is Interface {
+            subscribers.setObject(inputHandler as AnyObject, forKey: key)
+            return
+        }
+        fatalError("Handler should implement the Interface protocol. Check if you added the interface in your class i.e. Class: Interface {}")
     }
     
-    /// For classes that simpley inherits from NSObject (Objective C) the class name is resolved correctly.
+    /// For classes that simply inherits from NSObject (Objective C) the class name is resolved correctly.
     /// In Swift the string name is not the same as the actual class and therefore different from
     /// the key you migh have used. To avoid that uncertainty a key parameter was added to be sure
     /// your object is registered with a key you expect that would retrieve the object.
     /// - parameter key: The string key used to register and retrieve the registered object
     /// instance
     open func register(inputHandler: NSObject, withKey key: String) {
-        subscribers.setObject(inputHandler as AnyObject, forKey: key as NSString)
+        if inputHandler is Interface {
+            subscribers.setObject(inputHandler as AnyObject, forKey: key as NSString)
+            return
+        }
+        fatalError("Handler should implement the Interface protocol. Check if you added the interface in your class i.e. Class: Interface {}")
     }
     
     /// When the transmit method is called the registry is tasked to retrieve using the request's task key and call the handler's transmit method
@@ -42,9 +51,7 @@ open class ResponderRegistry: NSObject, Registry {
     @discardableResult
     open func tx(request: Request) -> Promise<MessageContainer> {
         guard let obj = getRegisteredEntity(withKey: request.process.key) else {
-            return Promise { seal in
-                seal.reject(RegistryError.set(description: "\(request.process.key) not registered!"))
-            }
+            fatalError("Class not registered!")
         }
         let handler = obj
         return handler.tx(request: request)
