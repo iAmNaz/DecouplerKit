@@ -10,8 +10,12 @@ import XCTest
 import DecouplerKit
 import PromiseKit
 
-class RegistryTests: XCTestCase {
+class SomeClass: NSObject {
     
+}
+
+class RegistryTests: XCTestCase {
+    let registrationFatalErrorDescription = "Handler should implement the Interface protocol. Check if you added the interface in your class i.e. Class: Interface {}";
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,7 +26,7 @@ class RegistryTests: XCTestCase {
         super.tearDown()
     }
     
-    func testConstollerIsRegistered() {
+    func testControllerIsRegistered() {
         let controller = FormController()
         let registry = ResponderRegistry()
         registry.register(inputHandler: controller)
@@ -50,8 +54,25 @@ class RegistryTests: XCTestCase {
         let formatter = DateFormatter()
         let request = Request(proc: Task.Exercise(.add), body: ExerciseSessionViewModel(dateFormatter: formatter, uniqueId: uniqueID(), name: "name", date: Date(), duration: Date()))
             registry.register(inputHandler: controller)
-        let promise = registry.tx(request: request)
-        XCTAssertTrue(promise.isRejected)
+        expectFatalError(expectedMessage: "Class not registered!") {
+            registry.tx(request: request)
+        }
+    }
+    
+    func testRegisteredWithKeyShouldCauseFatalErrorWhenClassDoNotConformToInterface() {
+        let controller = SomeClass()
+        let registry = ResponderRegistry()
+        expectFatalError(expectedMessage: self.registrationFatalErrorDescription) {
+            registry.register(inputHandler: controller, withKey: "keys")
+        }
+    }
+    
+    func testRegisteredShouldCauseFatalErrorWhenClassDoNotConformToInterface() {
+        let controller = SomeClass()
+        let registry = ResponderRegistry()
+        expectFatalError(expectedMessage: self.registrationFatalErrorDescription) {
+            registry.register(inputHandler: controller)
+        }
     }
     
     func testResponseReturnsRequest() {
@@ -65,5 +86,30 @@ class RegistryTests: XCTestCase {
         let response: Response = promise.value as! Response
         
         XCTAssertNotNil(response.request())
+    }
+    
+    func expectFatalError(expectedMessage: String, testcase: @escaping () -> Void) {
+        
+        // arrange
+        let expectation = self.expectation(description: "expectingFatalError")
+        var assertionMessage: String? = nil
+        
+        // override fatalError. This will pause forever when fatalError is called.
+        FatalErrorUtil.replaceFatalError { message, _, _ in
+            assertionMessage = message
+            expectation.fulfill()
+            unreachable()
+        }
+        
+        // act, perform on separate thead because a call to fatalError pauses forever
+        DispatchQueue.global(qos: .userInitiated).async(execute: testcase)
+        
+        waitForExpectations(timeout: 0.1) { _ in
+            // assert
+            XCTAssertEqual(assertionMessage, expectedMessage)
+            
+            // clean up
+            FatalErrorUtil.restoreFatalError()
+        }
     }
 }
